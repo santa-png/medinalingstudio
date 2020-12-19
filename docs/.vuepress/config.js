@@ -5,6 +5,7 @@ module.exports = {
       sidebar:[
         ['/', 'Inicio'],
         ['/articulos.md', 'Artículos']
+        ['/experimentos.md', 'Experimentos']
       ]
     }
   }
