@@ -1,6 +1,23 @@
 {
   "scripts": {
+
+    "lint": "eslint . --ext .js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "package.json": [
+      "sort-package-json",
+      "git add"
+    ]
+  },
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   }
-}
